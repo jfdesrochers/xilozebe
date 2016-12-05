@@ -29,7 +29,7 @@ prc.appendTo(sign);
 details.appendTo(sign);
 promo.appendTo(sign);
 
-$(document).ready(function() {
+$(window).load(function() {
    domtoimage.toBlob(document.getElementById('sign-container'))
     .then(function (blob) {
         window.saveAs(blob, 'my-node.png');
