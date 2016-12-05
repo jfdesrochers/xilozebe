@@ -29,7 +29,9 @@ prc.appendTo(sign);
 details.appendTo(sign);
 promo.appendTo(sign);
 
-domtoimage.toBlob(document.getElementById('sign-container'))
-.then(function (blob) {
-    window.saveAs(blob, 'my-node.png');
+$(window).on("load", function() {
+   domtoimage.toBlob(document.getElementById('sign-container'))
+    .then(function (blob) {
+        window.saveAs(blob, 'my-node.png');
+    });
 });
