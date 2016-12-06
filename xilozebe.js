@@ -24,9 +24,12 @@ var actionbar = $('<div id="action-bar">Une fois la page chargée, cliquez sur S
 var actionbtn = $('<button>Sauvegarder</button>').appendTo(actionbar);
 actionbtn.click(function(e) {
     e.preventDefault();
+    actionbtn.hide();
+    actionbar.text("Chargement en cours, veuillez patienter...");
     domtoimage.toBlob(document.getElementById('sign-container'))
     .then(function (blob) {
         window.saveAs(blob, 'monaffiche.png');
+        actionbar.text("Chargement terminé. L'image a été sauvegardée.");
     });
 });
 actionbar.appendTo("body");
