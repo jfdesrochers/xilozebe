@@ -38,6 +38,21 @@
     margin-left: 1060px;
 }
 
+#sign-container .topbar {
+    width: 1870px;
+    height: 100px;
+    background-color: #c00;
+    color: #fff;
+    padding: 25px;
+}
+
+#sign-container .topname {
+    float: right;
+    font-size: 90px;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
 #action-bar {
     position: fixed;
     left: 0;
@@ -49,6 +64,7 @@
     z-index: 50;
     padding: 15px;
     font-size: 30px;
+    opacity: 0.90;
 }
 
 #action-bar button {
@@ -60,7 +76,7 @@
     line-height: 1.42857143;
     text-align: center;
     white-space: nowrap;
-    vertical-align: middle;
+    vertical-align: middle
     -ms-touch-action: manipulation;
     touch-action: manipulation;
     cursor: pointer;
