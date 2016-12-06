@@ -26,7 +26,7 @@ actionbtn.click(function(e) {
     e.preventDefault();
     domtoimage.toBlob(document.getElementById('sign-container'))
     .then(function (blob) {
-        window.saveAs(blob, 'my-node.png');
+        window.saveAs(blob, 'monaffiche.png');
     });
 });
 actionbar.appendTo("body");
