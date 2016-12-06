@@ -19,8 +19,22 @@ promo.find(".collapsed").removeClass("collapsed").addClass("expanded");
 promo.find("a").remove();
 
 $("body").empty();
+
+var actionbar = $('<div id="action-bar">Une fois la page chargée, cliquez sur Sauvegarder pour créer l\'affiche.</div>');
+var actionbtn = $('<button>Sauvegarder</button>').appendTo(actionbar);
+actionbtn.click(function(e) {
+    e.preventDefault();
+    domtoimage.toBlob(document.getElementById('sign-container'))
+    .then(function (blob) {
+        window.saveAs(blob, 'my-node.png');
+    });
+});
+actionbar.appendTo(body);
+
 var sign = $("<div id='sign-container'></div>");
 sign.appendTo("body");
+
+var beglogo = $(".stp--icon-logo img").clone();
 
 title.appendTo(sign);
 sku.appendTo(sign);
@@ -28,10 +42,3 @@ img.appendTo(sign);
 prc.appendTo(sign);
 details.appendTo(sign);
 promo.appendTo(sign);
-
-$(window).load(function() {
-   domtoimage.toBlob(document.getElementById('sign-container'))
-    .then(function (blob) {
-        window.saveAs(blob, 'my-node.png');
-    });
-});
