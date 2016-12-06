@@ -37,7 +37,11 @@ actionbar.appendTo("body");
 var sign = $("<div id='sign-container'></div>");
 sign.appendTo("body");
 
+var topbar = $("<div class='topbar'></div>");
+topbar.appendTo(sign);
 var beglogo = $(".stp--icon-logo img").clone();
+beglogo.appendTo(topbar);
+$("<div class='topname'>Disponible sur bureauengros.ca</div>").appendTo(topbar);
 
 title.appendTo(sign);
 sku.appendTo(sign);
