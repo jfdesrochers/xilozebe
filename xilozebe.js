@@ -29,7 +29,7 @@ actionbtn.click(function(e) {
         window.saveAs(blob, 'my-node.png');
     });
 });
-actionbar.appendTo(body);
+actionbar.appendTo("body");
 
 var sign = $("<div id='sign-container'></div>");
 sign.appendTo("body");
