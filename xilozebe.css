@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+body, html {
+    font-family: "Raleway", helvetica, arial, sans-serif;
+}
+
 #sign-container {
+    font-family: "Raleway", helvetica, arial, sans-serif;
     position: fixed;
     left: 0;
     top: 0;
@@ -8,8 +14,11 @@
 }
 
 #sign-container h1 {
+    font-family: "Raleway", helvetica, arial, sans-serif;
     margin: 30px;
     margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 55px;
 }
 
 #sign-container .item-subtitle {
@@ -18,16 +27,24 @@
 
 #sign-container #STP--Product-Image {
     float: left;
-    margin-top: 105px;
+    margin-top: 45px;
+    margin-left: 65px;
     width: 762px;
 }
 
+#sign-container #STP--Product-Image img {
+    width: 600px;
+}
+
 #sign-container .pricing-details {
-    margin-left: 1060px;
+    margin-left: 960px;
+    margin-top: 65px;
 }
 
 #sign-container .stp--price.large, #sign-container .stp--price-original.large, #sign-container .stp--price-discounted.large {
+    font-family: "Raleway", helvetica, arial, sans-serif;
     font-size: 75px;
+    font-weight: bold;
 }
 
 #sign-container .units {
@@ -35,7 +52,18 @@
 }
 
 #sign-container .product-details-mini, #sign-container .item-promo {
-    margin-left: 1060px;
+    margin-left: 960px;
+    margin-top: 45px;
+    font-size: 20px;
+    max-width: 880px;
+}
+
+#sign-container .item-promo {
+    width: 680px !important;
+}
+
+#sign-container .product-details-mini h5, #sign-container .item-promo h5 {
+    font-size: 20px;
 }
 
 #sign-container .topbar {
@@ -46,11 +74,34 @@
     padding: 25px;
 }
 
+#sign-container .bottombar {
+    position: fixed;
+    top: 1030px;
+    left: 0;
+    width: 1920px;
+    height: 50px;
+    background-color: #c00;
+}
+
 #sign-container .topname {
     float: right;
-    font-size: 90px;
+    font-size: 100px;
     font-weight: bold;
     margin-right: 40px;
+}
+
+#sign-container ul.item-subtitle li {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#sign-container ul.item-subtitle li:first-child {
+    margin-left: 0;
+}
+
+#sign-container img {
+    margin-left: 40px;
 }
 
 #action-bar {
@@ -64,7 +115,9 @@
     z-index: 50;
     padding: 15px;
     font-size: 30px;
-    opacity: 0.90;
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
 }
 
 #action-bar button {
@@ -76,7 +129,7 @@
     line-height: 1.42857143;
     text-align: center;
     white-space: nowrap;
-    vertical-align: middle
+    vertical-align: middle;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
     cursor: pointer;
