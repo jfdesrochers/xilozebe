@@ -15,6 +15,6 @@ for /f "delims=" %%a in ('dir /b *.png') do (
     set /a "number+=1"
 )
 echo Rendering Video...
-..\ffmpeg -framerate 1/5 -start_number 100 -i img%%03d.png -c:v libx264 -r 30 -pix_fmt yuv420p ..\out\video.mp4
+..\ffmpeg -framerate 1/15 -start_number 100 -i img%%03d.png -c:v libx264 -r 30 -pix_fmt yuv420p ..\out\video.mp4
 echo Done.
 pause
