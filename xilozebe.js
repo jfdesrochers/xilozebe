@@ -13,20 +13,6 @@ function asArray(arrayLike) {
     return array;
 }
 
-function cleanFontFaces() {
-    var sheets = asArray(document.styleSheets);
-    sheets.forEach(function (sheet) {
-        if ((sheet.href) && (sheet.href.search(/xilozebe/i) === -1)) {
-            var rules = asArray(sheet.cssRules || []);
-            for (var i = rules.length - 1; i >= 0; i--) {
-                if (rules[i].type === CSSRule.FONT_FACE_RULE) {
-                    sheet.deleteRule(i);
-                }
-            }
-        }
-    });
-}
-
 var prc = $(".pricing-details").clone();
 prc.find(".offer-details").remove();
 var img = $("#STP--Product-Image").clone();
@@ -79,4 +65,14 @@ promo.appendTo(sign);
 
 $('<div class="bottombar"></div>').appendTo(sign);
 
-cleanFontFaces();
+var sheets = asArray(document.styleSheets);
+sheets.forEach(function (sheet) {
+    var rules = asArray(sheet.cssRules || []);
+    for (var i = rules.length - 1; i >= 0; i--) {
+        if (rules[i].type === CSSRule.FONT_FACE_RULE) {
+            sheet.deleteRule(i);
+        }
+    }
+});
+
+$('<style type="text/css"></style>').load("https://rawgit.com/jfdesrochers/xilozebe/master/xilozebe.css").appendTo("head");
